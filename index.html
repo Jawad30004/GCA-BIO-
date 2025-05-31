@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles for the body and container */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 1rem; /* Rounded corners for the main container */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            padding: 2rem;
+            width: 100%;
+            max-width: 800px; /* Max width for readability on larger screens */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem; /* Spacing between sections */
+        }
+
+        /* Styles for quiz option buttons */
+        .option-button {
+            display: block;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            margin-bottom: 0.75rem;
+            background-color: #edf2f7; /* Light gray background */
+            border: 2px solid #e2e8f0; /* Light gray border */
+            border-radius: 0.75rem; /* Rounded corners for options */
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out; /* Smooth transitions */
+            font-size: 1rem;
+            font-weight: 500;
+            color: #2d3748; /* Dark gray text */
+        }
+        .option-button:hover {
+            background-color: #e2e8f0;
+            border-color: #cbd5e0;
+        }
+        .option-button.selected {
+            background-color: #a7f3d0; /* Green-200 */
+            border-color: #34d399; /* Green-500 */
+        }
+        .option-button.correct {
+            background-color: #d1fae5; /* Green-100 */
+            border-color: #10b981; /* Green-600 */
+            font-weight: 600;
+        }
+        .option-button.incorrect {
+            background-color: #fee2e2; /* Red-100 */
+            border-color: #ef4444; /* Red-500 */
+            font-weight: 600;
+        }
+
+        /* Styles for navigation buttons */
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .navigation-buttons button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+        }
+        .navigation-buttons button:hover {
+            transform: translateY(-2px); /* Slight lift on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .submit-button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Styles for explanation box */
+        .explanation {
+            background-color: #e0f2fe; /* Light blue for explanation box */
+            border-left: 4px solid #38b2ac; /* Teal border for emphasis */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            color: #2d3748;
+            font-size: 0.9rem;
+        }
+
+        /* Utility class for hiding elements */
+        .hidden {
+            display: none;
+        }
+
+        /* Style for the custom message box */
+        #messageBox {
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0; /* Initially hidden */
+        }
+        #messageBox.show {
+            opacity: 1; /* Show when 'show' class is added */
+        }
+        #messageBox.success {
+            background-color: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        #messageBox.error {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <!-- The body content has been truncated for brevity in this file save step -->
+</body>
+</html>
